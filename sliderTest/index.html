@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/slider.css"/>
+		<style type="text/css">
+			#sliderWrap{
+				width: 800px;
+				height: 375px;
+				margin: 0 auto;
+			}
+			#slide1{
+				width: 500px;
+				height: 500px;
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sliderWrap">
+			<!--轮播图容器-->
+			<div id="slide">
+				<!--轮播图片-->
+				<div id="imgList">
+					<ul>
+						<li>
+							<a href="http://www.baidu.com" target="_blank">
+								<img src="img/1.jpg" />
+							</a>
+						</li>
+						<li>
+							<img src="img/2.jpg"/>
+						</li>
+						<li>
+							<img src="img/3.jpg"/>
+						</li>
+						<li>
+							<img src="img/4.jpg"/>
+						</li>
+					</ul>
+				</div>
+				<!-- 文字内容 -->
+				<div id="slide_text_list">
+					<ul>
+						<li class="textActive">
+							<a href="http://www.baidu.com" target="_blank">
+								 控制左右方向按钮1
+							</a>
+						</li>
+						<li>
+							<a href="http://www.baidu.com" target="_blank">
+								控制左右方向按钮2
+							</a>
+						</li>
+						<li>
+							<a href="http://www.baidu.com" target="_blank">
+								控制左右方向按钮3
+							</a>
+						</li>
+						<li>
+							<a href="http://www.baidu.com" target="_blank">
+								控制左右方向按钮4
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--分页器-->
+				<div id="point"></div>
+				<!--控制左右方向按钮-->
+				<div id="direction">
+					<ul>
+						<li class="toLeft"><</li>
+						<li class="toRight">></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jQuery.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript">
+		$('#sliderWrap').slider();
+		// $('#slide1').slider();
+	</script>
+</html>

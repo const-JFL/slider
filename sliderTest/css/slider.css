@@ -1,0 +1,138 @@
+/*
+ * 
+ *重置样式，防止用户没有重置样式，为了不影响用户样式，只重置轮播图容器内样式
+ */
+
+.slideActive{
+	background: red!important;
+	filter: alpha(opacity = 100)!important;
+}
+.textActive{
+	display: block!important;
+}
+#slide, #imgList, #point, #direction, #slide ul{
+	margin: 0;
+	padding: 0;
+}
+#slide, #imgList, #imgList li{
+	width: 100%;
+	height: 100%;
+}
+#slide{
+	position: relative;
+}
+#slide a{
+	text-decoration: none;
+}
+#slide li{
+	list-style: none;
+}
+#imgList{
+	overflow: hidden;
+	position: relative;
+}
+#imgList ul{
+	height: 100%;
+	zoom: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#imgList ul:after{
+	width: 0;
+	content: ".";
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+#imgList li{
+	float: left;
+}
+#imgList img {
+	width: 100%;
+	display: block;
+	border: none;
+}
+/* 文字样式 */
+#slide_text_list{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background: rgba(0, 0, 0, .5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+	bottom: 0;
+	left: 0;
+}
+#slide_text_list ul,
+#slide_text_list a{
+	display: block;
+	height: 100%;
+}
+#slide_text_list li{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+}
+#slide_text_list a{
+	font-size: 16px;
+	line-height: 40px;
+	color: #fff;
+	text-indent: 32px;
+}
+/*分页器样式*/
+#point{
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	width: 100%;
+}
+#point ul{
+	overflow: hidden;
+	text-align: center;
+	font-size: 0;
+	-webkit-text-size-adjust: none;
+}
+#point li{
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	margin: 0 5px;
+	border-radius: 50px;
+	cursor: pointer;
+	cursor: hand;
+}
+#point li:hover{
+	background: #000;
+	filter: alpha(opacity = 50);
+	background: rgba(0,0,0,.3);
+}
+/*控制方向样式*/
+#direction li{
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,.3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 32px;
+	cursor: pointer;
+	cursor: hand;
+	border-radius: 50px;
+}
+#direction .toLeft{
+	left: 0;
+}
+#direction .toRight{
+	right: 0;
+}
